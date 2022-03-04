@@ -21,6 +21,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # You can add custom software and dependencies for your environment below
 # -----------
+RUN sudo apt-get install wget
 RUN wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 RUN sudo dpkg -i packages-microsoft-prod.deb
 RUN rm packages-microsoft-prod.deb
