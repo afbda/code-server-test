@@ -25,7 +25,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 RUN sudo apt-get update; \
   sudo apt-get install -y apt-transport-https && \
   sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-6.0
+  sudo apt-get install -y dotnet-sdk-5.0
 
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
