@@ -21,8 +21,11 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # You can add custom software and dependencies for your environment below
 # -----------
-RUN sudo apt-add-repository https://packages.microsoft.com/ubuntu/20.04/prod
-RUN sudo apt-get install -y dotnet-sdk-3.1
+RUN wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+RUN sudo dpkg -i packages-microsoft-prod.deb
+RUN rm packages-microsoft-prod.deb
+RUN sudo apt-get install -y dotnet-sdk-6.0
+  
 
 # Install a VS Code extension:
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
