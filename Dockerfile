@@ -21,7 +21,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # You can add custom software and dependencies for your environment below
 # -----------
-
+RUN sudo apt-add-repository https://packages.microsoft.com/ubuntu/20.04/prod
 RUN sudo apt-get install -y dotnet-sdk-3.1
 
 # Install a VS Code extension:
