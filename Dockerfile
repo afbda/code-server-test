@@ -25,7 +25,7 @@ RUN sudo apt-get install wget
 RUN wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 RUN sudo dpkg -i packages-microsoft-prod.deb
 RUN rm packages-microsoft-prod.deb
-RUN sudo apt-get install -y dotnet-sdk-6.0
+RUN sudo apt-get install -y dotnet-sdk-3.1
   
 
 # Install a VS Code extension:
